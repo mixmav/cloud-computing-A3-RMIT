@@ -12,6 +12,15 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+	.sass('resources/scss/app.scss', 'public/css')
+	.disableNotifications()
+
+	.browserSync({
+		notify: false,
+		proxy: 'localhost',
+	})
+	.vue();
+	
+if (mix.inProduction()) {
+	mix.version();
+}

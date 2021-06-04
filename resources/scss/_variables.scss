@@ -1,0 +1,37 @@
+$primary-color: #C2185B;
+$primary-dark-color: darken($primary-color, 3%);
+$primary-alt-color: white;
+
+$secondary-color: darken(#8375DD, 5%);
+
+$black: rgba(black, 0.8);
+$red: #FF477E;
+$orange: #FC8C24;
+$yellow: #FDE747;
+$green: #61E294;
+$blue: #0BC9CD;
+$indigo: #8A4FFF;
+$teal: teal;
+$pink: #EC407A;
+
+$primary-color: $pink;
+
+$colors: (
+	'red': $red,
+	'orange': $orange,
+	'yellow': $yellow,
+	'green': $green,
+	'blue': $blue,
+	'indigo': $indigo,
+	'teal': $teal,
+	'pink': $pink,
+);
+
+@mixin media($width){
+	@media only screen and (max-width: $width){
+		@content;
+	}
+}
+
+$zIndex-go-to-top: 99;
+$zIndex-router-content: 98;
