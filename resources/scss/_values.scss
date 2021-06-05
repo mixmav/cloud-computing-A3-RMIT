@@ -188,10 +188,9 @@ i, span{
 	}
 }
 
-.a{
+.link{
 	text-decoration: none;
 	background: transparent;
-	@extend .no-select;
 	border: none;
 	cursor: pointer;
 

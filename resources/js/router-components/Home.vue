@@ -3,7 +3,7 @@
 		<div class="main-page-content">
 			
 			<div class="content">
-				<h1>This is <a href="https://vuejs.org/" target="_BLANK" class="a">Vue.js</a></h1>
+				<h1>This is <a href="https://vuejs.org/" target="_BLANK" class="link">Vue.js</a></h1>
 				<p class="mt-30">Hello test test</p>
 			</div>
 
