@@ -11736,7 +11736,7 @@ var staticRenderFns = [
             _c(
               "a",
               {
-                staticClass: "a",
+                staticClass: "link",
                 attrs: { href: "https://vuejs.org/", target: "_BLANK" }
               },
               [_vm._v("Vue.js")]

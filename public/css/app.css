@@ -27,7 +27,7 @@
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
-.no-select, .a, .icon-btn, .btn {
+.no-select, .icon-btn, .btn {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -253,45 +253,45 @@ i, span {
   pointer-events: none;
 }
 
-.a {
+.link {
   text-decoration: none;
   background: transparent;
   border: none;
   cursor: pointer;
   color: #EC407A;
 }
-.a:hover {
+.link:hover {
   text-decoration: underline;
 }
-.a.red {
+.link.red {
   color: #FF477E;
 }
-.a.orange {
+.link.orange {
   color: #FC8C24;
 }
-.a.yellow {
+.link.yellow {
   color: #FDE747;
 }
-.a.green {
+.link.green {
   color: #61E294;
 }
-.a.blue {
+.link.blue {
   color: #0BC9CD;
 }
-.a.indigo {
+.link.indigo {
   color: #8A4FFF;
 }
-.a.teal {
+.link.teal {
   color: teal;
 }
-.a.pink {
+.link.pink {
   color: #EC407A;
 }
-.a i {
+.link i {
   margin-right: 5px;
   transition: all 0.2s;
 }
-.a.i-rotate-hover:hover > i {
+.link.i-rotate-hover:hover > i {
   transform: rotate(-180deg);
 }
 

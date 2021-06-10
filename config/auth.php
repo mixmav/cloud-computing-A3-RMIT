@@ -37,12 +37,12 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver' => 'cognito-session',
             'provider' => 'users',
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'cognito-token',
             'provider' => 'users',
             'hash' => false,
         ],
