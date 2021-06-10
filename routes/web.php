@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@Home');
+Route::get('/auth/login', 'AuthController@LoginPage')->name('login');
+Route::get('/auth/register', 'AuthController@RegisterPage');
+Route::get('/auth/logout', 'AuthController@Logout');
+
+Route::post('/auth/login', 'AuthController@LoginUser');
+Route::post('/auth/register', 'AuthController@RegisterUser');
