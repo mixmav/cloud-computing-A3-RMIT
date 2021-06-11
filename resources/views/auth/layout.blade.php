@@ -44,6 +44,13 @@
 		.main-auth-content form input{
 			margin-top: 10px;
 		}
+		
+		.main-auth-content .form-errors{
+			margin-bottom: 30px;
+		}
+		.main-auth-content .form-errors li{
+			color: red;
+		}
 	</style>
 @endsection
 
@@ -57,6 +64,18 @@
 	</div>
 
 	<div class="main-auth-content">
+		<h3>Welcome to {{ config('app.name') }}</h3>
+		<br>
+		@if ($errors->any())
+			<div class="form-errors">
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
+
 		@yield('auth-content')
 	</div>
 @endsection
