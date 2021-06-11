@@ -33,7 +33,6 @@ class AuthController extends Controller
 
 		if (Auth::attempt($credentials)) {
 			$request->session()->regenerate();
-
 			return redirect()->intended('/');
 		}
 
@@ -51,7 +50,9 @@ class AuthController extends Controller
 		$user->email = $request->email;
 		$user->password = Hash::make($request->password);
 		$user->save();
-		
+
+		Auth::login($user);
+
 		$request->session()->regenerate();
 		return redirect()->intended('/');
 	}

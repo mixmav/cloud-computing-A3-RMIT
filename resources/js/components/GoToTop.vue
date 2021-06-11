@@ -3,7 +3,7 @@
 		
 		<transition name="transform-scale-full">
 			
-			<div class="icon z-depth-1" v-ripple @click="scrollToTop" v-show="visible">
+			<div class="icon z-depth-1" v-ripple @click="scrollToTop" v-show="scrolled">
 				<i class="fa fa-chevron-up"></i>
 			</div>
 
@@ -13,24 +13,14 @@
 </template>
 
 <script>
-import $ from 'jquery';
+import { mapState } from 'vuex';
 
 export default {
-	mounted(){
-		var $window = $(window);
-		$window.on('scroll', (event) => {
-			if ($window.scrollTop() > 110){
-				this.visible = true;
-			} else {
-				this.visible = false;
-			}
-		})
-	},
-	
-	data(){
-		return {
-			visible: false,
-		}
+	computed: {
+		...mapState([
+			'scrolled',
+		])
+		
 	},
 
 	methods: {

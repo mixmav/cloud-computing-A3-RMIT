@@ -38,7 +38,7 @@ export default {
 		max-width: 600px;
 
 		.content{
-			// margin-top: 60px;
+			margin-top: 60px;
 
 			p{
 				letter-spacing: 1px;

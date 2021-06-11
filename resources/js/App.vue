@@ -2,11 +2,10 @@
 	<div class="main-app-container" ref="container">
 		
 		<div class="main-content">
-			
+			<top-bar></top-bar>
 			<transition name="router-view" mode="out-in">
 				<router-view></router-view>
 			</transition>
-
 		</div>
 
 		<go-to-top></go-to-top>
@@ -15,6 +14,7 @@
 
 <script>
 
+import TopBar from './components/TopBar.vue';
 import GoToTop from './components/GoToTop.vue';
 
 import { mapActions } from 'vuex';
@@ -22,6 +22,7 @@ import $ from 'jquery';
 
 export default {
 	components: {
+		TopBar,
 		GoToTop,
 	},
 	created(){
@@ -40,11 +41,6 @@ export default {
 		$(window).off('scroll', this.$refs.container);
 	},
 
-	data(){
-		return {
-
-		}
-	},
 	methods: {
 		...mapActions([
 			'updateScrolled',
@@ -60,15 +56,12 @@ export default {
 
 	.main-app-container{
 		& > .main-content{
-			// margin-top: 150px; 
-			padding: 2em;
-
 			.main-page-content{
 				position: relative;
 				z-index: $zIndex-router-content;
 				overflow: auto;
+				padding: 2em;
 			}
-
 		}
 	}
 </style>
