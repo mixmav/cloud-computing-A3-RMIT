@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import $ from 'jquery';
 import { mapState } from 'vuex';
 
 export default {
@@ -26,7 +27,7 @@ export default {
 	methods: {
 		scrollToTop(){
 			var body = $("html, body");
-			body.stop().animate({scrollTop:0}, 500, 'swing');
+			body.stop().animate({scrollTop:0}, 450, 'swing');
 		}
 	}
 }
