@@ -15,7 +15,7 @@ import App from './App.vue';
 
 const router = new VueRouter({
 	routes
-})
+});
 
 new Vue({
 	el: '#app',

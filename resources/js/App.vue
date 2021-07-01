@@ -61,6 +61,22 @@ export default {
 				z-index: $zIndex-router-content;
 				overflow: auto;
 				padding: 2em;
+
+				background: rgba(white, 0.8);
+				border-radius: 5px;
+				display: inline-block;
+				width: 100%;
+				max-width: 600px;
+
+				.content{
+					margin-top: 60px;
+
+					p{
+						letter-spacing: 1px;
+						line-height: 1.4em;
+					}
+
+				}
 			}
 		}
 	}
