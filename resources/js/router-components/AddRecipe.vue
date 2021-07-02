@@ -14,6 +14,8 @@
 
 <script>
 
+import $ from 'jquery';
+
 export default {
 	data(){
 		return {
@@ -23,8 +25,22 @@ export default {
 
 	methods: {
 		addRecipe(){
-			
+			if (this.link.trim() != '') {
+				
+			} else {
+				alert('The link can\'t be empty.');
+			}
 		}
+	},
+
+	mounted(){
+		$.ajax({
+			url: 'https://6frp7wihm6.execute-api.ap-southeast-2.amazonaws.com/get-webpage-metadata',
+			method: 'POST',
+			success(response){
+				console.log(response);
+			}
+		})
 	}
 }
 </script>

@@ -1,6 +1,9 @@
 <template>
 	<div class="vTop-bar-container" :class="{'z-depth-scrolled': scrolled}">
 		<router-link to="/" class="link heading">RecipeHand</router-link>
+		<router-link tag="button" to="/add-recipe" class="btn" v-ripple><i class="fa fa-plus"></i>New recipe</router-link>
+		<router-link tag="button" to="/my-recipes" class="btn" v-ripple><i class="fa fa-hamburger"></i>My recipes</router-link>
+		<router-link tag="button" to="/cart" class="btn" v-ripple><i class="fa fa-shopping-cart"></i>Shopping cart</router-link>
 		<a href="/auth/logout" class="link"><i class="fa fa-sign-out-alt"></i>Logout</a>
 	</div>
 </template>

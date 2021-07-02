@@ -56,6 +56,7 @@ export default {
 
 	.main-app-container{
 		& > .main-content{
+			text-align: center;
 			.main-page-content{
 				position: relative;
 				z-index: $zIndex-router-content;
@@ -69,8 +70,8 @@ export default {
 				max-width: 600px;
 
 				.content{
-					margin-top: 60px;
-
+					text-align: left;
+					margin-top: 80px;
 					p{
 						letter-spacing: 1px;
 						line-height: 1.4em;

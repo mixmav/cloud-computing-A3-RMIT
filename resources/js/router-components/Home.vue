@@ -3,7 +3,7 @@
 		<div class="main-page-content">
 			
 			<div class="content">
-				<router-link tag="button" to="/add-recipe" class="btn" v-ripple><i class="fa fa-plus"></i>New recipe</router-link>
+				<h1>Home page</h1>
 			</div>
 		</div>
 	</div>

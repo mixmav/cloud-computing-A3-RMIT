@@ -4,6 +4,8 @@ Vue.use(VueRouter);
 
 import Home from './router-components/Home.vue';
 import AddRecipe from './router-components/AddRecipe.vue';
+import MyRecipes from './router-components/MyRecipes.vue';
+import ShoppingCart from './router-components/ShoppingCart.vue';
 
 const routes = [
 	{
@@ -15,6 +17,16 @@ const routes = [
 		path: '/add-recipe',
 		component: AddRecipe,
 		name: 'AddRecipe'
+	},
+	{
+		path: '/my-recipes',
+		component: MyRecipes,
+		name: 'MyRecipes'
+	},
+	{
+		path: '/cart',
+		component: ShoppingCart,
+		name: 'ShoppingCart'
 	},
 ]
 
