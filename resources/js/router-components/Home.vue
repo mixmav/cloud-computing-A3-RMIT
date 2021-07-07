@@ -7,7 +7,7 @@
 				<div v-for="recipe in recipes" :key="recipe.id" class="recipe">
 					<p>{{ recipe.name }}</p>
 					<a :href="recipe.link" target="_BLANK" class="link">{{recipe.link}}</a>
-					<i @click="likeRecipe(recipe.id)" class="fa fa-heart like-recipe z-depth-1" v-ripple></i>
+					<!-- <i @click="likeRecipe(recipe.id)" class="fa fa-heart like-recipe z-depth-1" v-ripple></i> -->
 				</div>
 			</div>
 		</div>

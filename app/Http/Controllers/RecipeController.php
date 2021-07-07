@@ -44,4 +44,25 @@ class RecipeController extends Controller
 	public function likeRecipe(){
 		return 'hi';
 	}
+
+	public function NewRecipe(Request $request){
+		$recipe_link = $request->link;
+
+		$recipe_content = file_get_contents($recipe_link);
+		preg_match("@<title.*?>(.*?)</title@i", $recipe_content, $matches);
+		$recipe_name = $matches[1];
+
+		$recipe = new Recipe;
+		$recipe->name = $recipe_name;
+		$recipe->link = $recipe_link;
+		$recipe->user_id = auth()->id();
+		$recipe->save();
+
+		return true;
+	}
+
+	public function getUserRecipes(){
+		$recipes = Recipe::where('user_id', '=', auth()->id())->get();
+		return $recipes;
+	}
 }

@@ -26,3 +26,5 @@ Route::post('/auth/register', 'AuthController@RegisterUser');
 Route::get('/get-homepage-recipes', 'RecipeController@GetHomePageRecipes');
 Route::get('/seed-recipes', 'RecipeController@SeedTenRecipes');
 Route::post('/like-recipe', 'RecipeController@LikeRecipe');
+Route::post('/new-recipe', 'RecipeController@NewRecipe');
+Route::get('/get-user-recipes', 'RecipeController@GetUserRecipes');

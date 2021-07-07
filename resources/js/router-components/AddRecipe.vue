@@ -5,8 +5,6 @@
 				<h3>Enter the link for the page with the recipe</h3>
 				<input type="text" class="text-input full-width" v-model="link" placeholder="https://example.com/xyz">
 				<button class="btn full-width green mt-20" v-ripple @click="addRecipe"><i class="fa fa-plus"></i>Add</button>
-
-				
 			</div>
 		</div>
 	</div>
@@ -26,7 +24,20 @@ export default {
 	methods: {
 		addRecipe(){
 			if (this.link.trim() != '') {
-				
+				var vThis = this;
+				$.ajax({
+					url: '/new-recipe',
+					method: 'POST',
+					data: {
+						link: vThis.link
+					},
+					success(response){
+						if (response) {
+							alert("Recipe added");
+							vThis.link = "";
+						}
+					}
+				})
 			} else {
 				alert('The link can\'t be empty.');
 			}
@@ -34,16 +45,6 @@ export default {
 	},
 
 	mounted(){
-		$.ajax({
-			url: 'https://xu2pwx8tk1.execute-api.ap-southeast-2.amazonaws.com/',
-			method: 'POST',
-			data: {
-				link: 'hello'
-			},
-			success(response){
-				console.log(response);
-			}
-		})
 	}
 }
 </script>
