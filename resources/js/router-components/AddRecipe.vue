@@ -35,8 +35,11 @@ export default {
 
 	mounted(){
 		$.ajax({
-			url: 'https://6frp7wihm6.execute-api.ap-southeast-2.amazonaws.com/get-webpage-metadata',
+			url: 'https://xu2pwx8tk1.execute-api.ap-southeast-2.amazonaws.com/',
 			method: 'POST',
+			data: {
+				link: 'hello'
+			},
 			success(response){
 				console.log(response);
 			}
